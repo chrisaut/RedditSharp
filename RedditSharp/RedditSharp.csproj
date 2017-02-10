@@ -1,34 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.4</TargetFrameworks>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AssemblyName>RedditSharp</AssemblyName>
-    <PackageId>RedditSharp</PackageId>
-    <NetStandardImplicitPackageVersion>1.4.0</NetStandardImplicitPackageVersion>
-    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.4' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <TargetFramework>netstandard1.4</TargetFramework>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <NoWarn>1701;1702;1705;CS1591;CS1572;CS1573</NoWarn>
-    <DocumentationFile />
-  </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="System.Net.Http" Version="4.1.1" />
-    <PackageReference Include="System.Net.Security" Version="4.0.0" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.1.0" />
-    <PackageReference Include="System.Threading.Thread" Version="4.0.0" />
-    <PackageReference Include="System.Reactive.Linq" Version="3.1.1" />
+       <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+       <PackageReference Include="System.Net.Http" Version="4.1.1" />
+       <PackageReference Include="System.Net.Security" Version="4.0.0" />
+       <PackageReference Include="System.Reflection.TypeExtensions" Version="4.1.0" />
+       <PackageReference Include="System.Threading.Thread" Version="4.0.0" />
+       <PackageReference Include="System.Reactive.Linq" Version="3.1.1" />   
   </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
 </Project>
