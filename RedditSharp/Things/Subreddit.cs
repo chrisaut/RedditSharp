@@ -710,7 +710,6 @@ namespace RedditSharp.Things
         /// Unbans a user
         /// </summary>
         /// <param name="user">User to unban, by username</param>
-        /// <summary>
         public async Task UnBanUserAsync(string user)
         {
             await WebAgent.Post(UnBanUserUrl, new
