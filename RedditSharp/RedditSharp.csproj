@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net462;netstandard1.4</TargetFrameworks>
+    <TargetFrameworks>netstandard1.4</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>RedditSharp</AssemblyName>
     <PackageId>RedditSharp</PackageId>
@@ -12,8 +12,9 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net462|AnyCPU'">
+  <PropertyGroup>
     <NoWarn>1701;1702;1705;CS1591;CS1572;CS1573</NoWarn>
+    <DocumentationFile />
   </PropertyGroup>
 
   <ItemGroup>
