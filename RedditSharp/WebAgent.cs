@@ -182,7 +182,7 @@ namespace RedditSharp
                 {
                     case RateLimitMode.Pace:
                         while ((DateTime.UtcNow - _lastRequest).TotalSeconds < 60.0 / limitRequestsPerMinute)// Rate limiting
-                            Thread.Sleep(250);
+                            System.Threading.Tasks.Task.Delay(250).Wait(); //Thread.Sleep(250);
                         _lastRequest = DateTime.UtcNow;
                         break;
                     case RateLimitMode.SmallBurst:
@@ -194,7 +194,7 @@ namespace RedditSharp
                         if (_requestsThisBurst >= limitRequestsPerMinute / 6.0) //limit has been reached
                         {
                             while ((DateTime.UtcNow - _burstStart).TotalSeconds < 10)
-                                Thread.Sleep(250);
+                                System.Threading.Tasks.Task.Delay(250).Wait(); //Thread.Sleep(250);
                             _burstStart = DateTime.UtcNow;
                             _requestsThisBurst = 0;
                         }
@@ -210,7 +210,7 @@ namespace RedditSharp
                         if (_requestsThisBurst >= limitRequestsPerMinute) //limit has been reached
                         {
                             while ((DateTime.UtcNow - _burstStart).TotalSeconds < 60)
-                                Thread.Sleep(250);
+                                System.Threading.Tasks.Task.Delay(250).Wait(); //Thread.Sleep(250);
                             _burstStart = DateTime.UtcNow;
                             _requestsThisBurst = 0;
                         }
